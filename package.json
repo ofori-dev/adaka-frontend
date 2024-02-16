@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^1.6.7",
+    "date-fns": "^3.0.2-rc.1",
     "next": "14.1.0",
     "next-cloudinary": "^5.20.0",
     "react": "^18",
