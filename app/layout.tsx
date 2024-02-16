@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { Navbar } from "./_components/navbar";
+import { Nunito } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
+
+import { Navbar } from "./components/navbar/Navbar";
+import ClientOnly from "./components/ClientOnly";
+import RegisterModal from "./components/modals/RegisterModal";
+
+const font = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "adaka",
@@ -18,8 +22,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Navbar />
-      <body className={inter.className}>{children}</body>
+      <body className={font.className}>
+        <ClientOnly>
+          <RegisterModal />
+          <Navbar />
+        </ClientOnly>
+        {children}
+      </body>
     </html>
   );
 }
