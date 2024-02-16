@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/react-date-range": "^1.4.9",
     "axios": "^1.6.7",
     "date-fns": "^3.0.2-rc.1",
     "next": "14.1.0",
